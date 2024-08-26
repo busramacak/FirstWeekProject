@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE0B2"
+    tools:context=".ui.SwitchFragment">
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/egoSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/ego"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/sky"
+        app:layout_constraintEnd_toEndOf="@+id/egoSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/egoSwitch" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/moon"
+        app:layout_constraintEnd_toEndOf="@+id/egoSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/switch4" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/ocean"
+        app:layout_constraintEnd_toEndOf="@+id/egoSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/switch5" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/flame"
+        app:layout_constraintEnd_toEndOf="@+id/egoSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/switch6" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/star"
+        app:layout_constraintEnd_toEndOf="@+id/egoSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/switch7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

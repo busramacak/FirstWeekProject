@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FirstWeekProject</string>
+
+    <string name="ego">EGO</string>
+    <string name="sky">Sky</string>
+    <string name="moon">Moon</string>
+    <string name="ocean">Ocean</string>
+    <string name="flame">Flame</string>
+    <string name="star">Star</string>
+</resources>
