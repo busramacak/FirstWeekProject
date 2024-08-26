@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFE0B2"
+    android:background="#DED2F4"
     tools:context=".ui.SwitchFragment">
 
     <com.google.android.material.materialswitch.MaterialSwitch
@@ -13,12 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:text="@string/ego"
+        android:checked="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@+id/switch4"
+        android:id="@+id/skySwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -27,38 +28,39 @@
         app:layout_constraintTop_toBottomOf="@+id/egoSwitch" />
 
     <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@+id/switch5"
+        android:id="@+id/moonSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="@string/moon"
         app:layout_constraintEnd_toEndOf="@+id/egoSwitch"
-        app:layout_constraintTop_toBottomOf="@+id/switch4" />
+        app:layout_constraintTop_toBottomOf="@+id/skySwitch" />
 
     <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@+id/switch6"
+        android:id="@+id/oceanSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:text="@string/ocean"
         app:layout_constraintEnd_toEndOf="@+id/egoSwitch"
-        app:layout_constraintTop_toBottomOf="@+id/switch5" />
+        app:layout_constraintTop_toBottomOf="@+id/moonSwitch" />
 
     <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@+id/switch7"
+        android:id="@+id/flameswitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:text="@string/flame"
         app:layout_constraintEnd_toEndOf="@+id/egoSwitch"
-        app:layout_constraintTop_toBottomOf="@+id/switch6" />
+        app:layout_constraintTop_toBottomOf="@+id/oceanSwitch" />
 
     <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/starSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:text="@string/star"
         app:layout_constraintEnd_toEndOf="@+id/egoSwitch"
-        app:layout_constraintTop_toBottomOf="@+id/switch7" />
+        app:layout_constraintTop_toBottomOf="@+id/flameswitch" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
