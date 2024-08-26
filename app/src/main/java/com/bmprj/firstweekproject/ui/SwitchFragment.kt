@@ -1,47 +1,67 @@
 package com.bmprj.firstweekproject.ui
 
+import android.view.View
+import com.bmprj.firstweekproject.R
 import com.bmprj.firstweekproject.base.BaseFragment
 import com.bmprj.firstweekproject.databinding.FragmentSwitchBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class SwitchFragment : BaseFragment<FragmentSwitchBinding>(FragmentSwitchBinding::inflate) {
+
+    private val bottomNavigationView by lazy {
+        requireActivity().findViewById<BottomNavigationView>(
+            R.id.bottomNavigationBar
+        )
+    }
+
     override fun setUpViews() {
         setUpListeners()
     }
 
     private fun setUpListeners() {
-        with(binding){
-            skySwitch.isEnabled=false
-            moonSwitch.isEnabled=false
-            oceanSwitch.isEnabled=false
-            flameswitch.isEnabled=false
-            starSwitch.isEnabled=false
+        with(binding) {
 
-            egoSwitch.setOnCheckedChangeListener { compoundButton, isChecked ->
-                if(isChecked){
-                    skySwitch.isEnabled=false
-                    moonSwitch.isEnabled=false
-                    oceanSwitch.isEnabled=false
-                    flameswitch.isEnabled=false
-                    starSwitch.isEnabled=false
+            if (egoSwitch.isChecked) {
+                disableSwitch()
+            }
 
-                    skySwitch.isChecked=false
-                    moonSwitch.isChecked=false
-                    oceanSwitch.isChecked=false
-                    flameswitch.isChecked=false
-                    starSwitch.isChecked=false
-                }else{
+            egoSwitch.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    disableSwitch()
+                    uncheckSwitch()
 
-
-                    skySwitch.isEnabled=true
-                    moonSwitch.isEnabled=true
-                    oceanSwitch.isEnabled=true
-                    flameswitch.isEnabled=true
-                    starSwitch.isEnabled=true
+                } else {
+                    enableSwitch()
                 }
             }
         }
 
+    }
+
+    private fun disableSwitch() {
+        setSwitchEnabled(false)
+    }
+
+    private fun enableSwitch() {
+        setSwitchEnabled(true)
+    }
+
+    private fun uncheckSwitch() {
+        with(binding) {
+            listOf(skySwitch, moonSwitch, oceanSwitch, flameswitch, starSwitch).forEach {
+                it.isChecked = false
+            }
+        }
+    }
+
+    private fun setSwitchEnabled(enabled: Boolean) {
+        with(binding) {
+            bottomNavigationView.visibility = if (enabled) View.VISIBLE else View.GONE
+            listOf(skySwitch, moonSwitch, oceanSwitch, flameswitch, starSwitch).forEach {
+                it.isEnabled = enabled
+            }
+        }
     }
 
 }
