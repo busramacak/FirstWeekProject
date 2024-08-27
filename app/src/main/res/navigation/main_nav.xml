@@ -25,4 +25,14 @@
         android:name="com.bmprj.firstweekproject.ui.OceanFragment"
         android:label="fragment_ocean"
         tools:layout="@layout/fragment_ocean" />
+    <fragment
+        android:id="@+id/flameFragment"
+        android:name="com.bmprj.firstweekproject.ui.FlameFragment"
+        android:label="fragment_flame"
+        tools:layout="@layout/fragment_flame" />
+    <fragment
+        android:id="@+id/starFragment"
+        android:name="com.bmprj.firstweekproject.ui.StarFragment"
+        android:label="fragment_star"
+        tools:layout="@layout/fragment_star" />
 </navigation>

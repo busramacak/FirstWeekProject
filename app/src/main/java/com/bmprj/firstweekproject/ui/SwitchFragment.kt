@@ -51,6 +51,8 @@ class SwitchFragment : BaseFragment<FragmentSwitchBinding>(FragmentSwitchBinding
             setupSwitchListener(moonSwitch,R.id.moonFragment,"Moon", R.drawable.switch_icon)
             setupSwitchListener(oceanSwitch,R.id.oceanFragment,"Ocean", R.drawable.switch_icon)
             setupSwitchListener(skySwitch,R.id.skyFragment,"Sky", R.drawable.switch_icon)
+            setupSwitchListener(flameswitch, R.id.flameFragment,"Flame",R.drawable.switch_icon)
+            setupSwitchListener(starSwitch, R.id.starFragment,"Star",R.drawable.switch_icon)
 
             bottomNavigationView.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         }
