@@ -10,4 +10,9 @@
         android:name="com.bmprj.firstweekproject.ui.SwitchFragment"
         android:label="fragment_switch"
         tools:layout="@layout/fragment_switch" />
+    <fragment
+        android:id="@+id/skyFragment"
+        android:name="com.bmprj.firstweekproject.ui.SkyFragment"
+        android:label="fragment_sky"
+        tools:layout="@layout/fragment_sky" />
 </navigation>
