@@ -6,6 +6,7 @@ import com.bmprj.firstweekproject.R
 import com.bmprj.firstweekproject.base.BaseFragment
 import com.bmprj.firstweekproject.databinding.FragmentSwitchBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.materialswitch.MaterialSwitch
 import com.google.android.material.navigation.NavigationBarView
 
 
@@ -35,36 +36,36 @@ class SwitchFragment : BaseFragment<FragmentSwitchBinding>(FragmentSwitchBinding
                     enableSwitch()
                 }
             }
-            skySwitch.setOnCheckedChangeListener{ _,isChecked ->
-                if(isChecked){
-                    bottomNavigationView.addItem(R.id.skyFragment,"Sky",R.drawable.switch_icon)
-                }else{
-                    bottomNavigationView.removeItem(R.id.skyFragment)
-                }
 
-            }
-
-            moonSwitch.setOnCheckedChangeListener { _, isChecked ->
-                if(isChecked){
-                    bottomNavigationView.addItem(R.id.moonFragment, "Moon", R.drawable.switch_icon)
-                }else{
-                    bottomNavigationView.removeItem(R.id.moonFragment)
+            fun setupSwitchListener(switch:MaterialSwitch, itemId: Int, itemTitle: String,itemIcon:Int){
+                switch.setOnCheckedChangeListener { _, isChecked ->
+                    if(isChecked){
+                        addItem(itemId,itemTitle,itemIcon)
+                    }else{
+                        removeItem(itemId)
+                    }
                 }
             }
+
+            setupSwitchListener(skySwitch,R.id.skyFragment,"Sky", R.drawable.switch_icon)
+            setupSwitchListener(moonSwitch,R.id.moonFragment,"Moon", R.drawable.switch_icon)
+            setupSwitchListener(oceanSwitch,R.id.oceanFragment,"Ocean", R.drawable.switch_icon)
+            setupSwitchListener(skySwitch,R.id.skyFragment,"Sky", R.drawable.switch_icon)
+
             bottomNavigationView.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         }
 
     }
 
-    private fun  BottomNavigationView.addItem(itemId:Int, itemTitle:String, icon:Int){
-        if(this.menu.findItem(itemId) == null){
-            this.menu.add(Menu.NONE, itemId, Menu.NONE, itemTitle).setIcon(icon)
 
+    private fun addItem(itemId:Int, itemTitle:String, icon:Int){
+        if(bottomNavigationView.menu.findItem(itemId) == null){
+            bottomNavigationView.menu.add(Menu.NONE, itemId, Menu.NONE, itemTitle).setIcon(icon)
         }
     }
 
-    private fun BottomNavigationView.removeItem(itemId: Int) {
-        this.menu.removeItem(itemId)
+    private fun removeItem(itemId: Int) {
+        bottomNavigationView.menu.removeItem(itemId)
     }
 
     private fun disableSwitch() {

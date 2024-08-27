@@ -20,4 +20,9 @@
         android:name="com.bmprj.firstweekproject.ui.MoonFragment"
         android:label="fragment_moon"
         tools:layout="@layout/fragment_moon" />
+    <fragment
+        android:id="@+id/oceanFragment"
+        android:name="com.bmprj.firstweekproject.ui.OceanFragment"
+        android:label="fragment_ocean"
+        tools:layout="@layout/fragment_ocean" />
 </navigation>
