@@ -1,10 +1,15 @@
 package com.bmprj.firstweekproject.ui
 
+import android.view.Menu
 import android.view.View
+import android.widget.CompoundButton
 import com.bmprj.firstweekproject.R
 import com.bmprj.firstweekproject.base.BaseFragment
 import com.bmprj.firstweekproject.databinding.FragmentSwitchBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.bottomnavigation.LabelVisibilityMode
+import com.google.android.material.materialswitch.MaterialSwitch
+import com.google.android.material.navigation.NavigationBarView
 
 
 class SwitchFragment : BaseFragment<FragmentSwitchBinding>(FragmentSwitchBinding::inflate) {
@@ -25,7 +30,6 @@ class SwitchFragment : BaseFragment<FragmentSwitchBinding>(FragmentSwitchBinding
             if (egoSwitch.isChecked) {
                 disableSwitch()
             }
-
             egoSwitch.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     disableSwitch()
@@ -35,6 +39,18 @@ class SwitchFragment : BaseFragment<FragmentSwitchBinding>(FragmentSwitchBinding
                     enableSwitch()
                 }
             }
+            skySwitch.setOnCheckedChangeListener{ _,isChecked ->
+                if(isChecked){
+                   if(bottomNavigationView.menu.findItem(R.id.skyFragment) == null){
+                       bottomNavigationView.menu.add(Menu.NONE, R.id.skyFragment, Menu.NONE,"Sky").setIcon(R.drawable.switch_icon)
+                   }
+                }else{
+                    bottomNavigationView.menu.removeItem(R.id.skyFragment)
+                }
+
+            }
+
+            bottomNavigationView.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         }
 
     }
