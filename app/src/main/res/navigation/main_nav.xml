@@ -15,4 +15,9 @@
         android:name="com.bmprj.firstweekproject.ui.SkyFragment"
         android:label="fragment_sky"
         tools:layout="@layout/fragment_sky" />
+    <fragment
+        android:id="@+id/moonFragment"
+        android:name="com.bmprj.firstweekproject.ui.MoonFragment"
+        android:label="fragment_moon"
+        tools:layout="@layout/fragment_moon" />
 </navigation>
