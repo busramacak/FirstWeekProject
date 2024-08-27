@@ -2,7 +2,6 @@ package com.bmprj.firstweekproject.ui
 
 import android.view.Menu
 import android.view.View
-import android.widget.CompoundButton
 import com.bmprj.firstweekproject.R
 import com.bmprj.firstweekproject.base.BaseFragment
 import com.bmprj.firstweekproject.databinding.FragmentSwitchBinding
@@ -32,35 +31,40 @@ class SwitchFragment : BaseFragment<FragmentSwitchBinding>(FragmentSwitchBinding
                 if (isChecked) {
                     disableSwitch()
                     uncheckSwitch()
-
                 } else {
                     enableSwitch()
                 }
             }
             skySwitch.setOnCheckedChangeListener{ _,isChecked ->
                 if(isChecked){
-                   if(bottomNavigationView.menu.findItem(R.id.skyFragment) == null){
-                       bottomNavigationView.menu.add(Menu.NONE, R.id.skyFragment, Menu.NONE,"Sky").setIcon(R.drawable.switch_icon)
-                   }
+                    bottomNavigationView.addItem(R.id.skyFragment,"Sky",R.drawable.switch_icon)
                 }else{
-                    bottomNavigationView.menu.removeItem(R.id.skyFragment)
+                    bottomNavigationView.removeItem(R.id.skyFragment)
                 }
 
             }
 
             moonSwitch.setOnCheckedChangeListener { _, isChecked ->
                 if(isChecked){
-                    if(bottomNavigationView.menu.findItem(R.id.moonFragment) == null){
-                        bottomNavigationView.menu.add(Menu.NONE, R.id.moonFragment, Menu.NONE,"Moon").setIcon(R.drawable.switch_icon)
-                    }
+                    bottomNavigationView.addItem(R.id.moonFragment, "Moon", R.drawable.switch_icon)
                 }else{
-                    bottomNavigationView.menu.removeItem(R.id.moonFragment)
+                    bottomNavigationView.removeItem(R.id.moonFragment)
                 }
             }
-
             bottomNavigationView.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         }
 
+    }
+
+    private fun  BottomNavigationView.addItem(itemId:Int, itemTitle:String, icon:Int){
+        if(this.menu.findItem(itemId) == null){
+            this.menu.add(Menu.NONE, itemId, Menu.NONE, itemTitle).setIcon(icon)
+
+        }
+    }
+
+    private fun BottomNavigationView.removeItem(itemId: Int) {
+        this.menu.removeItem(itemId)
     }
 
     private fun disableSwitch() {
