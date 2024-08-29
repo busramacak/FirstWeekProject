@@ -67,7 +67,7 @@ class SwitchFragment : BaseFragment<FragmentSwitchBinding>(FragmentSwitchBinding
 
 
     private fun addItem(itemId: Int, itemTitle: String, icon: Int) {
-        if(bottomNavigationView.menu.findItem(itemId) == null) { //TODO buraya bak
+        if(bottomNavigationView.menu.findItem(itemId) == null) {
             bottomNavigationView.menu.add(Menu.NONE, itemId, Menu.NONE, itemTitle).setIcon(icon)
         }
     }
