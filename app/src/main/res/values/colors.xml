@@ -7,4 +7,9 @@
     <color name="day">#87CEEB</color>
     <color name="dusk">#FFA07A</color>
     <color name="night">#2C3E50</color>
+
+    <color name="night_sky">#000000</color>
+    <color name="dawn_sky">#1c1c1c</color>
+    <color name="daylight_sky">#2e2e2e</color>
+    <color name="dusk_sky">#1a1a1a</color>
 </resources>
