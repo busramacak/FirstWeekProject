@@ -26,7 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/main_menu"
-        android:background="#B9AAD5"
+        android:background="#D7C8FB"
         app:labelVisibilityMode="selected"
         app:layout_constraintStart_toStartOf="parent" />
 
