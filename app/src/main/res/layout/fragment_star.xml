@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.StarFragment"
-    android:background="#FFD600">
+    android:background="@drawable/star_back">
 
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_star"
+        app:tint="@color/yellow" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_star"
+        android:layout_marginTop="100dp"
+        app:tint="@color/yellow" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_star"
+        android:layout_marginTop="200dp"
+        app:tint="@color/yellow" />
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_star"
+        android:layout_marginTop="300dp"
+        app:tint="@color/yellow" />
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_star"
+        android:layout_marginTop="400dp"
+        app:tint="@color/yellow" />
+
+    <ImageView
+        android:id="@+id/star6"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_star"
+        android:layout_marginTop="500dp"
+        app:tint="@color/yellow" />
 </FrameLayout>
