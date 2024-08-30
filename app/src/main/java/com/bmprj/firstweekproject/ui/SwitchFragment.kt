@@ -45,20 +45,22 @@ class SwitchFragment : BaseFragment<FragmentSwitchBinding>(FragmentSwitchBinding
                 itemIcon: Int,
             ) {
                 switch.setOnCheckedChangeListener { _, isChecked ->
-                    if(bottomNavigationView.menu.size < 5 && isChecked) {
-                        addItem(itemId, itemTitle, itemIcon)
-                    }else {
-                        switch.isChecked=false
-                        removeItem(itemId)
+                    if(bottomNavigationView.menu.size <= 5 && isChecked) {
+                        if(bottomNavigationView.menu.size != 5) {
+                            addItem(itemId, itemTitle, itemIcon)
+                        }
+                    }else{
+                        switch.isChecked = false
+                            removeItem(itemId)
                     }
                 }
             }
 
-            setupSwitchListener(skySwitch, R.id.skyFragment, "Sky", R.drawable.sky_icon)
-            setupSwitchListener(moonSwitch, R.id.moonFragment, "Moon", R.drawable.icon_moon)
-            setupSwitchListener(oceanSwitch, R.id.oceanFragment, "Ocean", R.drawable.icon_ocean)
-            setupSwitchListener(flameswitch, R.id.flameFragment, "Flame", R.drawable.icon_flame)
-            setupSwitchListener(starSwitch, R.id.starFragment, "Star", R.drawable.icon_star)
+                setupSwitchListener(skySwitch, R.id.skyFragment, "Sky", R.drawable.sky_icon)
+                setupSwitchListener(moonSwitch, R.id.moonFragment, "Moon", R.drawable.icon_moon)
+                setupSwitchListener(oceanSwitch, R.id.oceanFragment, "Ocean", R.drawable.icon_ocean)
+                setupSwitchListener(flameswitch, R.id.flameFragment, "Flame", R.drawable.icon_flame)
+                setupSwitchListener(starSwitch, R.id.starFragment, "Star", R.drawable.icon_star)
 
             bottomNavigationView.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         }
