@@ -19,7 +19,7 @@ class StarFragment : BaseFragment<FragmentStarBinding>(FragmentStarBinding::infl
             quadTo(500f, 100f, -200f, 700f)
         }
 
-        val moonPathAnimation1 = ObjectAnimator.ofFloat(binding.star1, View.X, View.Y, path1).apply {
+        val starPathAnimation1 = ObjectAnimator.ofFloat(binding.star1, View.X, View.Y, path1).apply {
             duration = 3000L
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.RESTART
@@ -30,7 +30,7 @@ class StarFragment : BaseFragment<FragmentStarBinding>(FragmentStarBinding::infl
             quadTo(500f, 250f, -200f, 850f)
         }
 
-        val moonPathAnimation2 = ObjectAnimator.ofFloat(binding.star2, View.X, View.Y, path2).apply {
+        val starPathAnimation2 = ObjectAnimator.ofFloat(binding.star2, View.X, View.Y, path2).apply {
             duration = 5000L
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.RESTART
@@ -41,7 +41,7 @@ class StarFragment : BaseFragment<FragmentStarBinding>(FragmentStarBinding::infl
             quadTo(500f, 400f, -200f, 1000f)
         }
 
-        val moonPathAnimation3 = ObjectAnimator.ofFloat(binding.star3, View.X, View.Y, path3).apply {
+        val starPathAnimation3 = ObjectAnimator.ofFloat(binding.star3, View.X, View.Y, path3).apply {
             duration = 2000L
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.RESTART
@@ -52,7 +52,7 @@ class StarFragment : BaseFragment<FragmentStarBinding>(FragmentStarBinding::infl
             quadTo(500f, 550f, -200f, 1150f)
         }
 
-        val moonPathAnimation4 = ObjectAnimator.ofFloat(binding.star4, View.X, View.Y, path4).apply {
+        val starPathAnimation4 = ObjectAnimator.ofFloat(binding.star4, View.X, View.Y, path4).apply {
             duration = 3500L
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.RESTART
@@ -63,7 +63,7 @@ class StarFragment : BaseFragment<FragmentStarBinding>(FragmentStarBinding::infl
             quadTo(500f, 700f, -200f, 1300f)
         }
 
-        val moonPathAnimation5 = ObjectAnimator.ofFloat(binding.star5, View.X, View.Y, path5).apply {
+        val starPathAnimation5 = ObjectAnimator.ofFloat(binding.star5, View.X, View.Y, path5).apply {
             duration = 2000L
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.RESTART
@@ -74,15 +74,15 @@ class StarFragment : BaseFragment<FragmentStarBinding>(FragmentStarBinding::infl
             quadTo(500f, 1200f, -200f, 1650f)
         }
 
-        val moonPathAnimation6 = ObjectAnimator.ofFloat(binding.star6, View.X, View.Y, path6).apply {
+        val starPathAnimation6 = ObjectAnimator.ofFloat(binding.star6, View.X, View.Y, path6).apply {
             duration = 1000L
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.RESTART
         }
 
-        val moonAnimatorSet = AnimatorSet().apply {
-            playTogether(moonPathAnimation1, moonPathAnimation2,moonPathAnimation3,moonPathAnimation4,moonPathAnimation5,moonPathAnimation6)
+        val starAnimatorSet = AnimatorSet().apply {
+            playTogether(starPathAnimation1, starPathAnimation2,starPathAnimation3,starPathAnimation4,starPathAnimation5,starPathAnimation6)
         }
-        moonAnimatorSet.start()
+        starAnimatorSet.start()
     }
 }

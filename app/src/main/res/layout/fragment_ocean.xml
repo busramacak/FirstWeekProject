@@ -1,9 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#437378"
-    tools:context=".ui.OceanFragment">
+    android:background="#79D0E8">
+    
+    <ImageView
+        android:id="@+id/fish1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/fish1"/>
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/fish2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/fish2" />
+
+    <ImageView
+        android:id="@+id/fish3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/fish2"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/fish3" />
+
+    <ImageView
+        android:id="@+id/fish4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/fish3"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/fish4" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ocean_background" />
+
+    <ImageView
+        android:id="@+id/fish5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/fish4"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/fish5" />
+
+    <ImageView
+        android:id="@+id/fish6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/fish6" />
+
+</RelativeLayout>
